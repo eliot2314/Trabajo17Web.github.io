@@ -1,0 +1,744 @@
+/*Se puede implementar variables para utilizar los valores repetitivos y evitar escribir codigo de más*/
+:root{/*se puede implementar variables para utilizar valores repetitivos*/
+    --fondoBase:   #6B9080; 
+    --fondoPrincipal: silver;
+    --fondoSecundario: rgb(235,244,244);
+    --textoPrincipal: #6cc091;
+    --textoSecundario: #fff;
+    --textoblanco: #ffffff;
+    --textonegro: #000;
+    --espacioExterno: 1.5em;
+    --espacioInterno: 1em;
+    --tamanioFuente: 20px;/*al papa su unidad de medida es*/
+    --fondoBase2: #A4C3B2;
+    --titulobloque1: 90px;
+    --titulo2bloque1: 50px;
+    --colorplomo: #898798;
+}
+/*------------------------------------------------*/
+
+/*configuracion inicial*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+html{/*por defecto es por salto si no ponemos el html*/
+    scroll-behavior: smooth;/*hace un  dezplasamiento cada que cambia en el navegador ,sube o baja scrol dezplasamiento*/
+    font-size: var(--tamanioFuente);/*todos los elementos de html va tener esa medidad*/
+}
+
+/*organizar la estructura principal */
+.principal{/*contenedor principal*/
+    width: 90%;
+    background-color: var(--fondoPrincipal);
+    margin: 0 auto;/*el 0 se aplica arriba y por reflexion abajo se aplica tambine,
+    el auto calcula la derecha y izquierda*/
+    position: relative;/* se va posicionar en el lugar que originalmente yo lo puse,punto de referencia para que la poscion fija se respete de acuerdo al contenedor*/
+    flex: 1; /* Esto hace que el contenido principal ocupe el espacio restante */
+
+}
+.encabezado{
+height: 100px;
+background-color: var(--textoblanco);/*color hexagecimal*/
+color: var(--textoSecundario);
+padding: 0 50px;/*dice que de arriba a abajo hay 0 de espacio , y de derecha a izquierda hay 50 de espacio*/
+display: flex;/*se agrupa en filas con los demas contenedores*/
+justify-content: space-between;
+align-items: center;
+}
+.encabezado{
+    position: sticky;/*el encabezado o naveg se quede fijo o pegado a la pantalla*/
+    top: 0;
+    z-index: 1000;/*posiciona los elementos, hacia adelante*/
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: -70px;  /* Espacio entre el logo y la imagen */
+
+}
+
+.logo{
+    font-size: 20px;
+    color: var(--fondoBase);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200; /*disminuye el grosor de la letra,de la fuente*/
+}
+.logo-imagen {
+    width: 80px;  /*  tamaño de la imagen */
+    height: 80px; /*  tamaño de la imagen */
+    margin-left: 10px;  /* Espacio entre el logo y la imagen */
+}
+
+
+.menu a{/*la letra de navegacion*/
+    color: var(--fondoBase);
+    text-transform: uppercase;/*transforma todo a mayuscyla*/
+    text-decoration: none;/*elimina el interlineado*/
+    padding: 0 10px;  
+}
+.mostrarMenu{
+    color: #000;
+
+}
+.mostrarMenu, .ocultarMenu{/*es el menu hamburguesa y el menu X*/
+    font-size: 50px;/*tamaño de la letra*/
+    cursor: pointer;/*para que aparesca la manito*/
+    display: none;/*ocultar un elemento de la página web*/
+}
+.mostrarMenu{/*el menu hamburguesa*/
+    order: 1;/*este va primero*/
+}
+.menu a:hover, .mostrarMenu:hover, .ocultarMenu:hover{/*cuando seleccionamos con el mouse letra,menuhamburguesa o x ,la letra se cambia a color verde solo cuando el cursos esta encima de la letra*/
+    color: var(--textoPrincipal);
+}
+#check{/*contenedor del check,cuando es label empieza de #*/
+display: none;/*no tiene porque mostrarse el check*/
+}
+
+
+
+
+/* PRIMER CONTENEDOR,PRIMER BLOQUEEEEEEEEEEEEEEEEEEE */
+.bloque{/*contenedor de bloque adicional de informacion donde esta el section */
+    width: 100%;
+    /*height: 50vh;*/
+    min-height: 75vh;/*es la altura minima acomoda la altura*/
+}
+.bloque{
+    scroll-margin-top: 100px;/*alinea bien cuando le doy click al navegador me redirige pero en el titulo o posicion exacta*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--textoblanco);
+}
+.bloque:nth-child(odd){/*(1, 3, 5, cuadro.)impar le da el color puesto en este contenedor,2n al par*/
+    background-color: var(--textoblanco);/*color al fondo recomendado*/
+}/*pinta los bloques de manera aimpar*/
+
+/*manejo de css para elemento internos*/ 
+.contenedor{
+    font-size:  1rem;/* 16px se mantiene+8=24pxla unidad de medida rem es igual a 16px,porque el papa esta configurado asi*/
+    margin: var(--espacioExterno);
+    padding: var(--espacioInterno);
+   /* display: flex;/*agrupa en filas
+    flex-direction: column;/*uno delante de otro en manera vertical
+    align-items: center;/*centraliza de manera vertical
+    justify-content: center;*//*centraliza de manera horizontal*/
+    text-align: center;
+}
+/* creando la estrucutra de cards*/
+
+.cards{
+
+    width: 100%;
+    padding: var(--espacioInterno);
+    display: flex;/*que se agrupe en filas,uno al costado del otro*/
+    gap: var(--espacionterno);/*espaciado de */
+    justify-content: center;/*justificar y centrar*/
+    
+}
+.card{/*contenedor que va con la etiqueta article*/
+    width: 530px;/*tamaño de los dispositivos moviles*/
+/*padding: var(--espacioInterno);*/
+overflow: hidden;/*para que cualquier elemento se sobreponga solamente no se vea*/
+}
+
+
+.card__titulo p{
+    font-size: var(--titulobloque1);
+    color: var(--fondoBase);
+    line-height: 4rem; /* Interlineado */
+    text-align: initial; /* Alineación del texto */
+    padding-top: 0.2em; /* Reducir el espacio superior */
+    padding-bottom: 0.2em; /* Reducir el espacio inferior */
+    padding-left: 0; /* Mantener espacio a la izquierda */
+    padding-right: 0; /* Mantener espacio a la derecha */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+.card__titulo2{
+    font-size: var(--titulo2bloque1);
+    color: var(--fondoBase2);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6rem ;/*linea de o internileado*/
+    text-align: justify;/*para que quede alineado*/
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700; /*disminuye el grosor de la letra,de la fuente*/
+}
+.card__titulo2 h2 {
+    margin-bottom: 40px; /* Espacio entre h2 y h3 */
+}
+
+.card__titulo2 h3 {
+    margin-top: 0; /* Si quieres quitar cualquier margen extra de h3 */
+}
+.boton {
+    border-radius: 10px;
+    background-color: #6B9080;
+    padding: 15px 30px;  /* Aumenta el tamaño interno del botón */
+    font-size: 16px;     /* Aumenta el tamaño del texto */
+    width: 30%;         /* Hacer que el ancho sea responsive */
+    max-width: 300px;    /* Máximo ancho en pantallas grandes */
+    color: var(--textoblanco);
+    height: 50px;        /* Establece una altura fija */
+    border: none;        /* Elimina el borde */
+    display: block;      /* Asegura que el botón sea un bloque */
+    margin: 30px 20px;   /* Centra el botón horizontalmente y lo separa un poco del contenido superior */
+    text-align: center;  /* Centra el texto dentro del botón */
+}
+
+.card__foto {
+    width: 80%;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.card__foto img {
+    display: block;
+    width: 100%;  /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    object-position: left center;
+    transition: all 0.5s;
+}
+
+.card:hover img {
+    object-position: right center;
+}
+/* -------------------------------------- */
+
+
+
+
+/*-------------------contenedor o contenido 2-------------------*/
+/* ACA ESTA LO DE GALE */
+/* Estilos para la galería */
+.bloque .contenedor .cards .cardgaleria{
+    position: relative;
+    left: 5%;
+}
+.cardgaleria {
+    display: flex;
+    align-items: flex-start; /* Alineación de los elementos hacia la parte superior */
+}
+
+/* Estilos para los títulos en la sección Gale */
+.card__titulogale1 h2,
+.card__titulogale2 h2 {
+    font-size: 70px;
+    line-height: 1.5rem;
+    text-align: left;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0; /* Eliminar márgenes innecesarios */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+/* Específicos para cada título */
+.card__titulogale1 h2 {
+    color: var(--fondoBase); /* Color específico */
+    margin-right: 10px; /* Espaciado entre los títulos */
+}
+
+.card__titulogale2 h2 {
+    color: var(--colorplomo); /* Color específico */
+}
+
+/* Estilos para el tercer título */
+.card__titulogale3 h2 {
+    position: relative;
+    font-size: 50px;
+    line-height: 1.7rem;
+    text-align: left;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: var(--colorplomo);
+    margin-left: 10px; /* Espaciado entre el tercer título y el segundo */
+
+}
+
+/* Estilos adicionales para el párrafo */
+.parrafo {
+    position: relative;
+    color: var(--colorplomo);
+    margin-top: 20px; /* Espaciado entre el último título y el párrafo */
+    text-align: left;
+    padding-left: 0;
+    line-height: 1.8rem; /* Asegura que el texto tenga buen espaciado entre líneas */
+    display: block; /* Asegura que el contenedor no se expanda horizontalmente */
+    max-width: 600px; /* Limita el ancho del contenedor para evitar que se expanda demasiado */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste a una nueva línea si es necesario */
+    
+}
+.parrafo p{
+    font-size: 17px; /* Tamaño de texto más grande para mejor legibilidad */
+
+}
+/* Estilos para las imágenes en la galería */
+/* Estilos para el contenedor de las imágenes */
+.card__foto .imagenesgaleria {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var(--textoblanco);
+    padding: 60px;
+    border-radius: 10px;
+    bottom: 80px;
+}
+
+/* Contenedor de cada imagen */
+.image-container {
+    position: relative; /* Permite posicionar el texto dentro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para las imágenes */
+.image-container img {
+    width: 90%; /* Ajusta el tamaño según el contenedor */
+    height: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el texto dentro del marco */
+.image-name {
+    position: absolute;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+}
+
+
+
+/* --------------------------------- */
+/*BLOQUE SILLA*/
+
+.card__titulosilla{
+color: var(--colorplomo);
+font-size: 30px;
+}
+.card__titulo2silla .boton{
+    position: relative;
+  margin-left: 200px;
+}
+.silla{
+    
+    display: flex;
+   
+    position: relative;
+    margin-top: 5%;
+}
+.card__fotosillaimg{
+    position: relative;
+    margin-right: 100%;
+    position: relative;
+   bottom: 8%;
+}
+/* --------------------------------- */
+
+
+
+
+
+
+
+/* BLOQUE PRECIO */
+.contenedorprecio{
+    background-color: #6cc091;
+    display: flex;
+    position: relative;
+  
+    
+
+}
+.contenedorprecio .card__titulo{
+    font-size: 30px;
+    color: var(--colorplomo);
+}
+.card-imageprecio {
+    z-index: 111;
+    position: relative; /* Posiciona la imagen fuera del flujo normal del contenedor */
+    top: 80px; /* Ajusta la posición para que se salga hacia arriba */
+   
+    z-index: 999; /* Asegúrate de que el contenedor principal tenga un z-index adecuado */
+
+    width: 130%;
+    height: 100%; /* Mantiene la proporción de la imagen */
+}
+
+.card-imageprecio img{
+    position: relative;
+    right: 40px;
+    width: 70%;
+    z-index: 10000;
+}
+.precio{
+    
+    position: relative;  
+    align-content: center;
+    margin-left: 100px;
+    gap: 0;
+    
+}
+
+.contenedorprecio .precio .cardprecio{
+align-items: center;
+    
+}
+.btnpreci{
+    gap: 0%;
+    background-color: #fff;
+    display: flex;
+    justify-content:center; /* Alinea los elementos al inicio (sin espacio entre ellos) */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+.botonp {
+    border-radius: 5px;
+    background-color: #6B9080;
+    padding: 4px 50px;  /* Aumenta el tamaño interno del botón */
+    font-size: 16px;     /* Aumenta el tamaño del texto */
+    width: 40%;         /* Hacer que el ancho sea responsive */
+    color: var(--textoblanco);
+    height: 40px;        /* Establece una altura fija */
+    border: none;        /* Elimina el borde */
+    display: block;      /* Asegura que el botón sea un bloque */
+    margin: 30px 20px;   /* Centra el botón horizontalmente y lo separa un poco del contenido superior */
+    text-align: center;  /* Centra el texto dentro del botón */
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  
+}
+.textpre{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+
+}
+.contenedorprecio .precio .cardprecio{
+    justify-content: center;
+}
+.contenedorprecio{
+
+    position: relative;
+    width: 60%; /* Ajusta el tamaño según el contenedor */
+    height: auto; /* La altura será automática en función del contenido */
+    background-color:var(--textoblanco);
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* ---------------------------- ----- */
+
+
+
+
+
+
+
+
+/* PIE DE PAGINA */
+
+.pie{
+    position: relative; /* Si quieres que esté en su lugar normal dentro del flujo */
+    width: 100%; /* Esto hace que el pie ocupe todo el ancho de la página */
+    background-color: #2D2B3A;
+    color: var(--textoblanco);
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    bottom: 0; /* Lo coloca en la parte inferior si se usa posición fija */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.menu h3, .contacto h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-bottom: 5px;
+}
+
+.menu ul li a, .copyright a {
+    color: #6fcf97;
+    text-decoration: none;
+}
+
+.contacto p {
+    margin: 5px 0;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.pie .container h2{
+    color: var(--textoblanco);
+}
+.pie .menu a, p{
+    color: #898798;
+}
+/* -------------------------------------------------- */
+
+
+
+/*Generar cambios para diferentes pantallas utilizando media query*/
+/*Responsiva para pantallas pequeñas ,mobil*/
+@media screen and (max-width: 768px){/*pantalla maxima 768*/
+    .principal{
+        width: 100%;/*estoy ganando espaciel ancho en modo movil*/
+    }
+    .principal h2, h3{
+        text-align: center;
+        justify-items: center;
+    }
+    .card__titulo p{
+        text-align: center;
+
+    }
+  
+
+    
+    
+
+    .menu{
+        position: fixed;/*que sea fijo que no se mueva*/
+        top: 0;
+        left: 100%;
+        z-index: 100;/*100 posiciones encima de otros*/
+        width: 100%;
+        height: 100vh;/*es el largo del contenedor o donde aparece la navegacion ya habiendole dado click al menu hamburguesa*/
+        background-color: var(--fondoBase);
+        text-align: center;/*centra horizontalmente*/
+        padding: 200px 0;/*arriba abajo,izquierda derecha*/
+        transition: all 0.5s; /*efecto de animasion que se da entre 1 o otro elemento*//*css3,stodo es uno,solo son actualizacion*/
+    }
+    .menu a{
+        display: block;/*lo tiene en un bloque horizontalmente*/
+        padding: 20px;/*separacion */
+        color: var(--textoblanco);
+    }
+    .mostrarMenu{
+position: relative;
+left: 35px ;
+    }
+    .ocultarMenu, .mostrarMenu{
+        display: block;/*AGRUPA VERTICALMENTE O POR COLUMNA*/
+
+    }
+    .ocultarMenu{/*el icono del x su posicion*/
+        position: absolute; /*SE FIJA SU POSICION PERO EN SU PADRE CONTENEDRO*/
+        top: 40px;
+        right: 40px;
+    
+    }
+    #check:checked ~ .menu{/*para que aparesca el menu*/
+        left: 0;
+
+    }
+    /*modificar el contenido;*/
+.contenedor{
+    margin: 0;
+    padding: 0;
+}
+
+.cards{
+    flex-wrap: wrap;/*que se envuelva,si no alanza que apararesca uno a abjo de otro*/
+}
+.card {
+    width: 100%;  /* Hace que las cards ocupen todo el ancho en pantallas pequeñas */
+}
+
+.card__titulo {
+    font-size: 60px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.card__titulo2 {
+    font-size: 40px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.boton {
+    width: 140px;  /* Reduce el ancho del botón en pantallas pequeñas */
+    font-size: 13px; /* Ajusta el tamaño del texto del botón */
+    top: 0px;
+}
+
+.card__foto {
+    width: 100%;  /* Hace que la imagen ocupe todo el ancho del contenedor */
+    margin-top: 20px;  /* Agrega un poco de espacio superior para separar la imagen */
+}
+
+.boton {
+    margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
+}
+.pie {
+    padding: 30px 15px;
+}
+
+.logo h2 {
+    font-size: 20px; /* Reducir tamaño de letra */
+}
+
+.menu h3, .contacto h3 {
+    font-size: 16px; /* Reducir tamaño de letra */
+}
+
+.menu ul li {
+    margin-bottom: 4px;
+}
+
+.menu ul li a, .copyright a {
+    font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.contacto p {
+    font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.copyright {
+    font-size: 12px; /* Reducir tamaño de letra */
+}
+.cardgaleria {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parrafo {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.card__foto .imagenesgaleria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    bottom: 0;
+}
+
+.image-container img {
+    width: 100%;
+    padding: 20px;
+}
+.boton {
+    margin-left: 30%;
+    justify-content: center;
+    width: 140px;  /* Hace el botón más pequeño en pantallas muy pequeñas */
+    font-size: 13px;  /* Ajusta aún más el tamaño del texto */
+}
+.card__titulosilla{
+    position: relative;
+    text-align: start;
+   
+    justify-items: center;
+    font-size: 16px;
+
+}
+.silla{
+    position: relative;
+    right: 0px;
+}
+.card__fotosillaimg img{
+    margin-left: 25px;
+    width: 400px;
+ 
+}
+.contenedorprecio .precio{
+    width: 100px;
+    
+   
+}
+.card-imageprecio img{
+    position: absolute;
+    top: 100px;
+    width:35vh ;
+
+
+}
+
+}
+
+
+
+
+/* Media Queries para dispositivos muy pequeños */
+@media screen and (max-width: 400px) {
+.card__titulo {
+    font-size: 50px;  /* Hace el título aún más pequeño en pantallas muy pequeñas */
+}
+
+.card__titulo2 {
+    font-size: 35px;  /* Reduce el tamaño de la fuente en pantallas muy pequeñas */
+}
+
+.boton {
+    justify-content: center;
+    width: 120px;  /* Hace el botón más pequeño en pantallas muy pequeñas */
+    font-size: 14px;  /* Ajusta aún más el tamaño del texto */
+}
+.contenedorprecio .precio{
+    width: 100px;
+    
+   
+}
+.card-imageprecio img{
+    position: absolute;
+    top: 100px;
+right: 0%;
+    width:35vh ;
+
+
+}
+
+
+
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller landing Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/taller.css">
+</head>
+<body>
+    <main class="principal"><!--El contenedor principal-->
+    <header class="encabezado"><!--El encabezado -->
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo de Cristian Retamales" class="logo-imagen">
+            <h2 class="logo">Ps.Cristian Retamales</h2><!-- el logo dentro del encabezado -->
+        </div>
+        <input type="checkbox"  id="check"><!--se agrega un check box-->
+        <label for="check" class="mostrarMenu">&#8801</label><!--la clase muesta,el menu hamburguesa el icono es &#8801-->
+        <nav class="menu"><!--este es el navegador en la pagina web-->
+            <a href="#inicio">Quiero ayuda</a>
+            <a href="#galeria">Precios</a>
+            <a href="#contactanos">Blog</a>
+            <a href="#intranet">Contáctame</a>
+            <label for="check" class="ocultarMenu">&#215</label><!--muestra icono x cuando doy click tiene el id menu-->
+        </nav>
+        <script>
+            // Cerrar el menú hamburguesa después de hacer clic en un enlace
+            document.querySelectorAll('.menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('check').checked = false;
+                });
+            });
+        </script>
+        <script>
+            // Cerrar el menú hamburguesa después de hacer clic en un enlace
+            document.querySelectorAll('.menu a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+                    const targetId = link.getAttribute('href'); // Obtiene el ID de la sección objetivo
+                    const targetSection = document.querySelector(targetId); // Encuentra la sección objetivo
+        
+                    if (targetSection) {
+                        // Desplazamiento suave a la sección objetivo
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+        
+                        // Cierra el menú después de un pequeño retraso
+                        setTimeout(() => {
+                            document.getElementById('check').checked = false;
+                        }, 300); // Ajusta el retraso según sea necesario
+                    }
+                });
+            });
+        </script>
+    </header>
+    <section class="bloque" id="inicio">
+        <div class="contenedor">
+           <div class="cards">
+            
+            <article class="card">
+        <div class="card__titulo">
+            <p>Quiero</p>
+        </div>
+        <div class="card__titulo2">
+            <h2>sentirme bien</h2>
+            <h3>conmigo</h3>
+            <button class="boton">Contactame</button>
+        </div>
+        </article>
+        <article class="card">
+           
+         <div class="card__foto">
+            <img src="img/fondo.png" alt="Logo de Cristian Retamales" class="">
+
+         </div>
+         </article>
+          </div>
+        </div>
+    </section>
+    <section class="bloque" id="contactanos">
+        <div class="contenedor">
+            <div class="cards">
+                <article class="cardgaleria">
+                    <div class="texto">
+                    <div class="card__titulogale1">
+                        <h2>¿Cómo</h2>
+                        </div>
+                           <div class="card__titulogale2">
+                           <h2>
+                            puedo 
+                           </h2>
+                           <h2>ayudarte?</h2>
+                           </div>
+                           <div class="parrafo">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, harum quo enim dolorem sunt at molestiae tempore asperiores iure minima facilis itaque et ratione odio nobis expedita, dolor id. Velit iste consectetur doloremque blanditiis quibusdam, sint aperiam eveniet similique exercitationem odit fugiat cum rem at a praesentium molestias. Ipsam, id!</p>
+                        </div>
+                    </div>
+                    <div class="card__foto">
+                        <div class="imagenesgaleria">
+                            <div class="image-container">
+                                <img src="img/Animo.png" alt="">
+                                <div class="image-name">Animo</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="img/Miedos.png" alt="">
+                                <div class="image-name">Miedo</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="img/Relaciones interpersonales.png" alt="">
+                                <div class="image-name">Relaciones Personales</div>
+                            </div>
+                            <div class="image-container">
+                                <img src="img/Autoestima.png" alt="">
+                                <div class="image-name">Autestima e inseguridad</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </article>
+            </div>
+         </div>
+    </section>
+
+    <section class="bloque" id="intranet">
+        <div class="contenedor">
+           <div class="cards">
+            <div class="silla">
+            <article class="card">
+        <div class="card__titulosilla">
+            <h2>Porque ir a psicoterapia no te hace "loco"
+            </h2>
+        </div>
+        <div class="card__titulo2silla">
+            <p>Contáctame ahora y podré ayudarte.
+            </p>
+            <button class="boton">Contactame</button>
+        </div>
+    </div>
+        </article>
+        <article class="card">
+           
+         <div class="card__fotosillaimg">
+            <img src="img/silla.png" alt="silla de Cristian Retamales" class="">
+
+         </div>
+         </article>
+          </div>
+        </div>
+    </section>
+    <section class="bloque" id="galeria">
+        <div class="contenedorprecio">
+            <div class="precio">
+           <div class="cards">
+            <article class="cardprecio">
+        <div class="card__titulo">
+            <h2>Elige la modalidad que
+                más te convenga
+            </h2>
+        </div>
+        <div class="card__titulo2silla">
+            <div class="btnpreci">
+            <button class="botonp">Online</button>
+            <button class="botonp">Presencial</button>
+        </div>
+        <div class="textpre">
+            <p>$15.000
+            </p>
+            <p>$22.000
+            </p>
+        </div>
+        </div>
+        </div>
+    </div>
+        </article>
+        
+           
+         <div class="card__foto">
+            <div class="card-imageprecio">
+            <img src="img/precio.png" alt="precio de Cristian Retamales" class="">
+       <div>
+         </div>
+         
+        </div>
+    </section>
+
+    
+    
+  </main>
+  <footer class="pie">
+    <div class="container">
+        <div class="logo">
+            <h2>Ps.Cristian Retamales</h2>
+            <div class="social-icons">
+                <a href="#">
+                    <i class='bx bxl-instagram' style='color:#6fcf97'></i>
+                </a>                    
+                <a href="#">
+                    <i class='bx bxl-tiktok' style='color:#6cc091'  ></i>
+                </a>
+            </div>
+        </div>
+        <div class="menu">
+            <h3>Menú</h3>
+            <ul>
+                <li><a href="#">Quiero ayuda</a></li>
+                <li><a href="#">Precios</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contáctame</a></li>
+            </ul>
+        </div>
+        <div class="contacto">
+            <h3>Contáctame</h3>
+            <p>+56949586234</p>
+            <p>ps.cristian.retamales@gmail.com</p>
+            <p>Augusto Leguía Sur 79, Las Condes</p>
+        </div>
+    </div>
+    <p class="copyright">Copyright © 2024. <a href="#">Ps.Cristian Retamales</a></p>
+
+</footer>
+</body>
+</html>

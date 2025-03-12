@@ -744,6 +744,159 @@ right: 0%;
     width:35vh ;
 }
 
+.principal{
+    width: 130%;/*estoy ganando espaciel ancho en modo movil*/
+}
+.principal h2, h3{
+    text-align: center;
+    justify-items: center;
+}
+.card__titulo p{
+    text-align: center;
+
+}
+
+
+
+
+
+.menu{
+    position: fixed;/*que sea fijo que no se mueva*/
+    top: 0;
+    left: 100%;
+    z-index: 100;/*100 posiciones encima de otros*/
+    width: 100%;
+    height: 100vh;/*es el largo del contenedor o donde aparece la navegacion ya habiendole dado click al menu hamburguesa*/
+    background-color: var(--fondoBase);
+    text-align: center;/*centra horizontalmente*/
+    padding: 200px 0;/*arriba abajo,izquierda derecha*/
+    transition: all 0.5s; /*efecto de animasion que se da entre 1 o otro elemento*//*css3,stodo es uno,solo son actualizacion*/
+}
+.menu a{
+    display: block;/*lo tiene en un bloque horizontalmente*/
+    padding: 20px;/*separacion */
+    color: var(--textoblanco);
+}
+.mostrarMenu{
+position: relative;
+left: 35px ;
+}
+.ocultarMenu, .mostrarMenu{
+    display: block;/*AGRUPA VERTICALMENTE O POR COLUMNA*/
+
+}
+.ocultarMenu{/*el icono del x su posicion*/
+    position: absolute; /*SE FIJA SU POSICION PERO EN SU PADRE CONTENEDRO*/
+    top: 40px;
+    right: 40px;
+
+}
+#check:checked ~ .menu{/*para que aparesca el menu*/
+    left: 0;
+
+}
+/*modificar el contenido;*/
+.contenedor{
+margin: 0;
+padding: 0;
+}
+
+.cards{
+flex-wrap: wrap;/*que se envuelva,si no alanza que apararesca uno a abjo de otro*/
+}
+.card {
+width: 100%;  /* Hace que las cards ocupen todo el ancho en pantallas pequeñas */
+}
+
+.card__titulo {
+font-size: 60px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.card__titulo2 {
+font-size: 40px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.boton {
+width: 140px;  /* Reduce el ancho del botón en pantallas pequeñas */
+font-size: 13px; /* Ajusta el tamaño del texto del botón */
+top: 0px;
+}
+
+.card__foto {
+width: 100%;  /* Hace que la imagen ocupe todo el ancho del contenedor */
+margin-top: 20px;  /* Agrega un poco de espacio superior para separar la imagen */
+}
+
+.boton {
+margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
+}
+.pie {
+
+width: 129%;
+}
+
+.logo h2 {
+font-size: 20px; /* Reducir tamaño de letra */
+}
+
+.menu h3, .contacto h3 {
+font-size: 16px; /* Reducir tamaño de letra */
+}
+
+.menu ul li {
+margin-bottom: 4px;
+}
+
+.menu ul li a, .copyright a {
+font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.contacto p {
+font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.copyright {
+font-size: 12px; /* Reducir tamaño de letra */
+}
+.cardgaleria {
+width: 90%;
+flex-direction: column;
+align-items: center;
+}
+.silla{
+font-size: 10px;
+    position: relative;
+    right: 18px;
+}
+.card__fotosillaimg img {
+margin-left: 25px;
+width: 350px;
+}
+.contenedorprecio .card__titulo {
+position: relative;
+right: 30px;
+font-size:5px;
+
+}
+.card__titulo2silla{
+position: relative;
+right:7%;
+font-size: 10px;
+}
+.btnprecio{
+position: relative;
+
+}
+.card-imageprecio img {
+position: absolute;
+top: 50px;
+right: 50%;
+width: 30vh;
+}
+.container{
+justify-content: center;
+align-items: center;
+}
 }
 
 
@@ -903,4 +1056,168 @@ font-size: 10px;
     justify-content: center;
 }
 }
+
+
+
+
+
+
+/* Media Queries para dispositivos muy pequeños */
+@media screen and (max-width: 346px) {
+    .principal{
+        width: 130%;/*estoy ganando espaciel ancho en modo movil*/
+    }
+    .principal h2, h3{
+        text-align: center;
+        justify-items: center;
+    }
+    .card__titulo p{
+        text-align: center;
+
+    }
+  
+
+    
+    
+
+    .menu{
+        position: fixed;/*que sea fijo que no se mueva*/
+        top: 0;
+        left: 100%;
+        z-index: 100;/*100 posiciones encima de otros*/
+        width: 100%;
+        height: 100vh;/*es el largo del contenedor o donde aparece la navegacion ya habiendole dado click al menu hamburguesa*/
+        background-color: var(--fondoBase);
+        text-align: center;/*centra horizontalmente*/
+        padding: 200px 0;/*arriba abajo,izquierda derecha*/
+        transition: all 0.5s; /*efecto de animasion que se da entre 1 o otro elemento*//*css3,stodo es uno,solo son actualizacion*/
+    }
+    .menu a{
+        display: block;/*lo tiene en un bloque horizontalmente*/
+        padding: 20px;/*separacion */
+        color: var(--textoblanco);
+    }
+    .mostrarMenu{
+position: relative;
+left: 35px ;
+    }
+    .ocultarMenu, .mostrarMenu{
+        display: block;/*AGRUPA VERTICALMENTE O POR COLUMNA*/
+
+    }
+    .ocultarMenu{/*el icono del x su posicion*/
+        position: absolute; /*SE FIJA SU POSICION PERO EN SU PADRE CONTENEDRO*/
+        top: 40px;
+        right: 40px;
+    
+    }
+    #check:checked ~ .menu{/*para que aparesca el menu*/
+        left: 0;
+
+    }
+    /*modificar el contenido;*/
+.contenedor{
+    margin: 0;
+    padding: 0;
+}
+
+.cards{
+    flex-wrap: wrap;/*que se envuelva,si no alanza que apararesca uno a abjo de otro*/
+}
+.card {
+    width: 100%;  /* Hace que las cards ocupen todo el ancho en pantallas pequeñas */
+}
+
+.card__titulo {
+    font-size: 60px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.card__titulo2 {
+    font-size: 40px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.boton {
+    width: 140px;  /* Reduce el ancho del botón en pantallas pequeñas */
+    font-size: 13px; /* Ajusta el tamaño del texto del botón */
+    top: 0px;
+}
+
+.card__foto {
+    width: 100%;  /* Hace que la imagen ocupe todo el ancho del contenedor */
+    margin-top: 20px;  /* Agrega un poco de espacio superior para separar la imagen */
+}
+
+.boton {
+    margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
+}
+.pie {
+  
+    width: 129%;
+}
+
+.logo h2 {
+    font-size: 20px; /* Reducir tamaño de letra */
+}
+
+.menu h3, .contacto h3 {
+    font-size: 16px; /* Reducir tamaño de letra */
+}
+
+.menu ul li {
+    margin-bottom: 4px;
+}
+
+.menu ul li a, .copyright a {
+    font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.contacto p {
+    font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.copyright {
+    font-size: 12px; /* Reducir tamaño de letra */
+}
+.cardgaleria {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+}
+.silla{
+    font-size: 15px;
+        position: relative;
+        right: 28px;
+}
+.card__fotosillaimg img {
+    margin-left: 60px;
+    width: 250px;
+}
+.contenedorprecio .card__titulo {
+    position: relative;
+    right: 65px;
+    font-size:12px;
+   
+}
+.card__titulo2silla{
+    position: relative;
  
+right:10%;
+font-size: 0px;
+}
+.btnprecio{
+    position: relative;
+
+   
+}
+.card-imageprecio img {
+    position: absolute;
+    top: 40px;
+    right: 100%;
+    width: 25vh;
+}
+.container{
+    align-items: center;
+    justify-content: center;
+}
+
+}

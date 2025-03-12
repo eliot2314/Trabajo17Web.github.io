@@ -745,7 +745,9 @@ right: 0%;
 }
 
 .principal{
-    width: 130%;/*estoy ganando espaciel ancho en modo movil*/
+    max-width: 100%; /* Evita que la página sea más ancha que la pantalla */
+    overflow-x: hidden; /* Elimina el desbordamiento horizontal */
+    
 }
 .principal h2, h3{
     text-align: center;
@@ -831,8 +833,7 @@ margin-top: 20px;  /* Agrega un poco de espacio superior para separar la imagen 
 margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
 }
 .pie {
-
-width: 129%;
+    max-width: 100%;
 }
 
 .logo h2 {

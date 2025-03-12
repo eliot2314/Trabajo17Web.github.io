@@ -748,6 +748,7 @@ right: 0%;
 
 .principal{
     max-width: 100%; /* Evita que la página sea más ancha que la pantalla */
+    overflow-x: hidden; /* Elimina el desbordamiento horizontal */
     
 }
 .principal h2, h3{
@@ -896,7 +897,7 @@ position: relative;
 position: absolute;
 top: 50px;
 right: 50%;
-width: 30vh;
+width: 25vh;
 }
 .container{
 justify-content: center;

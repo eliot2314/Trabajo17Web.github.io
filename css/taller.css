@@ -806,9 +806,13 @@ padding: 0;
 }
 
 .cards{
+   
+    position: relative;
+    right:10px;
     padding: 0px;
 flex-wrap: wrap;/*que se envuelva,si no alanza que apararesca uno a abjo de otro*/
 }
+
 .card {
    
 width: 100%;  /* Hace que las cards ocupen todo el ancho en pantallas pequeñas */
@@ -837,7 +841,7 @@ margin-top: 20px;  /* Agrega un poco de espacio superior para separar la imagen 
 margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
 }
 .pie {
-    padding: 0px;
+    padding: 10px;
     max-width: 100%;
 }
 
@@ -872,10 +876,10 @@ align-items: center;
 .silla{
 font-size: 10px;
     position: relative;
-    right: 18px;
+    right: 3px;
 }
 .card__fotosillaimg img {
-margin-left: 25px;
+margin-left: 50px;
 width: 350px;
 }
 .contenedorprecio .card__titulo {
@@ -886,8 +890,12 @@ font-size:5px;
 }
 .card__titulo2silla{
 position: relative;
-right:7%;
+right:4%;
 font-size: 10px;
+}
+.card__titulo2silla .boton{
+    position: relative;
+    right:40px;
 }
 .btnprecio{
 position: relative;
@@ -916,6 +924,8 @@ align-items: center;
     font-size: 50px;
 
 }
+
+
 }
 
 

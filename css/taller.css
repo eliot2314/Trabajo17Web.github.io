@@ -717,6 +717,8 @@ left: 35px ;
 
 
 
+
+
 /* Media Queries para dispositivos muy pequeños */
 @media screen and (max-width: 400px) {
 .card__titulo {
@@ -746,7 +748,6 @@ right: 0%;
 
 .principal{
     max-width: 100%; /* Evita que la página sea más ancha que la pantalla */
-    overflow-x: hidden; /* Elimina el desbordamiento horizontal */
     
 }
 .principal h2, h3{
@@ -804,9 +805,11 @@ padding: 0;
 }
 
 .cards{
+    padding: 0px;
 flex-wrap: wrap;/*que se envuelva,si no alanza que apararesca uno a abjo de otro*/
 }
 .card {
+   
 width: 100%;  /* Hace que las cards ocupen todo el ancho en pantallas pequeñas */
 }
 
@@ -833,6 +836,7 @@ margin-top: 20px;  /* Agrega un poco de espacio superior para separar la imagen 
 margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
 }
 .pie {
+    padding: 0px;
     max-width: 100%;
 }
 
@@ -897,6 +901,19 @@ width: 30vh;
 .container{
 justify-content: center;
 align-items: center;
+}
+.principal .precio h2 {
+    text-align: center;
+    justify-items: center;
+    font-size: 17px;
+}
+.principal .cards .card .card__titulo p{
+    font-size: 60px;
+
+}
+.principal .cards .card .card__titulo2 h2, h3{
+    font-size: 50px;
+
 }
 }
 
@@ -1041,7 +1058,7 @@ left: 35px ;
 .card__titulo2silla{
     position: relative;
 right:7%;
-font-size: 10px;
+font-size: 12px;
 }
 .btnprecio{
     position: relative;
@@ -1056,6 +1073,7 @@ font-size: 10px;
 .container{
     justify-content: center;
 }
+
 }
 
 

@@ -749,9 +749,9 @@ right: 0%;
 
 
 /* Media Queries para dispositivos muy pequeños */
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 322px) {
     .principal{
-        width: 120%;/*estoy ganando espaciel ancho en modo movil*/
+        width: 130%;/*estoy ganando espaciel ancho en modo movil*/
     }
     .principal h2, h3{
         text-align: center;
@@ -837,7 +837,8 @@ left: 35px ;
     margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
 }
 .pie {
-    width: 123%;
+  
+    width: 129%;
 }
 
 .logo h2 {
@@ -868,5 +869,38 @@ left: 35px ;
     flex-direction: column;
     align-items: center;
 }
- 
+.silla{
+    font-size: 20px;
+        position: relative;
+        right: 18px;
 }
+.card__fotosillaimg img {
+    margin-left: 25px;
+    width: 350px;
+}
+.contenedorprecio .card__titulo {
+    position: relative;
+    right: 30px;
+    font-size:14px;
+   
+}
+.card__titulo2silla{
+    position: relative;
+right:7%;
+font-size: 10px;
+}
+.btnprecio{
+    position: relative;
+   
+}
+.card-imageprecio img {
+    position: absolute;
+    top: 50px;
+    right: 50%;
+    width: 30vh;
+}
+.container{
+    justify-content: center;
+}
+}
+ 

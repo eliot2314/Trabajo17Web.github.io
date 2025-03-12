@@ -525,6 +525,13 @@ align-items: center;
 .pie .menu a, p{
     color: #898798;
 }
+.social-icons{
+    font-size: 35px;
+    position: relative;
+    left: 60px;
+    align-items: center;
+    justify-items: center;
+}
 /* -------------------------------------------------- */
 
 
@@ -735,10 +742,131 @@ left: 35px ;
     top: 100px;
 right: 0%;
     width:35vh ;
-
+}
 
 }
 
 
 
+/* Media Queries para dispositivos muy pequeños */
+@media screen and (max-width: 372px) {
+    .principal{
+        width: 120%;/*estoy ganando espaciel ancho en modo movil*/
+    }
+    .principal h2, h3{
+        text-align: center;
+        justify-items: center;
+    }
+    .card__titulo p{
+        text-align: center;
+
+    }
+  
+
+    
+    
+
+    .menu{
+        position: fixed;/*que sea fijo que no se mueva*/
+        top: 0;
+        left: 100%;
+        z-index: 100;/*100 posiciones encima de otros*/
+        width: 100%;
+        height: 100vh;/*es el largo del contenedor o donde aparece la navegacion ya habiendole dado click al menu hamburguesa*/
+        background-color: var(--fondoBase);
+        text-align: center;/*centra horizontalmente*/
+        padding: 200px 0;/*arriba abajo,izquierda derecha*/
+        transition: all 0.5s; /*efecto de animasion que se da entre 1 o otro elemento*//*css3,stodo es uno,solo son actualizacion*/
+    }
+    .menu a{
+        display: block;/*lo tiene en un bloque horizontalmente*/
+        padding: 20px;/*separacion */
+        color: var(--textoblanco);
+    }
+    .mostrarMenu{
+position: relative;
+left: 35px ;
+    }
+    .ocultarMenu, .mostrarMenu{
+        display: block;/*AGRUPA VERTICALMENTE O POR COLUMNA*/
+
+    }
+    .ocultarMenu{/*el icono del x su posicion*/
+        position: absolute; /*SE FIJA SU POSICION PERO EN SU PADRE CONTENEDRO*/
+        top: 40px;
+        right: 40px;
+    
+    }
+    #check:checked ~ .menu{/*para que aparesca el menu*/
+        left: 0;
+
+    }
+    /*modificar el contenido;*/
+.contenedor{
+    margin: 0;
+    padding: 0;
+}
+
+.cards{
+    flex-wrap: wrap;/*que se envuelva,si no alanza que apararesca uno a abjo de otro*/
+}
+.card {
+    width: 100%;  /* Hace que las cards ocupen todo el ancho en pantallas pequeñas */
+}
+
+.card__titulo {
+    font-size: 60px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.card__titulo2 {
+    font-size: 40px;  /* Reduce el tamaño de la fuente para pantallas pequeñas */
+}
+
+.boton {
+    width: 140px;  /* Reduce el ancho del botón en pantallas pequeñas */
+    font-size: 13px; /* Ajusta el tamaño del texto del botón */
+    top: 0px;
+}
+
+.card__foto {
+    width: 100%;  /* Hace que la imagen ocupe todo el ancho del contenedor */
+    margin-top: 20px;  /* Agrega un poco de espacio superior para separar la imagen */
+}
+
+.boton {
+    margin-top: 20px;  /* Agrega espacio entre el botón y la imagen */
+}
+.pie {
+    width: 123%;
+}
+
+.logo h2 {
+    font-size: 20px; /* Reducir tamaño de letra */
+}
+
+.menu h3, .contacto h3 {
+    font-size: 16px; /* Reducir tamaño de letra */
+}
+
+.menu ul li {
+    margin-bottom: 4px;
+}
+
+.menu ul li a, .copyright a {
+    font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.contacto p {
+    font-size: 14px; /* Reducir tamaño de letra */
+}
+
+.copyright {
+    font-size: 12px; /* Reducir tamaño de letra */
+}
+.cardgaleria {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+}
+ 
 }

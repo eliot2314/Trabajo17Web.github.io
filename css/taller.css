@@ -1,3 +1,12 @@
+/* Tema de las tipografias */
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Grechen+Fuemen&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sansita+Swashed:wght@300..900&display=swap');
+.principal{
+    font-family: "PT Serif", serif;
+    /* los dos tipos de tipografia */
+/* font-family: "PT Serif", serif; */
+/*     font-family: "Asul", serif; */
+}
+/* ------------------------------- */
 /*Se puede implementar variables para utilizar los valores repetitivos y evitar escribir codigo de más*/
 :root{/*se puede implementar variables para utilizar valores repetitivos*/
     --fondoBase:   #6B9080; 
@@ -62,7 +71,7 @@ align-items: center;
 .logo{
     font-size: 20px;
     color: var(--fondoBase);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "PT Serif", serif;
     font-weight: 200; /*disminuye el grosor de la letra,de la fuente*/
 }
 .logo-imagen {
@@ -155,16 +164,14 @@ overflow: hidden;/*para que cualquier elemento se sobreponga solamente no se vea
     padding-bottom: 0.2em; /* Reducir el espacio inferior */
     padding-left: 0; /* Mantener espacio a la izquierda */
     padding-right: 0; /* Mantener espacio a la derecha */
-    font-family: 'Times New Roman', Times, serif;
+
     font-weight: 700;
 }
 .card__titulo2{
     font-size: var(--titulo2bloque1);
     color: var(--fondoBase2);
-    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6rem ;/*linea de o internileado*/
     text-align: justify;/*para que quede alineado*/
-    font-family: 'Times New Roman', Times, serif;
     font-weight: 700; /*disminuye el grosor de la letra,de la fuente*/
 }
 .card__titulo2 h2 {
@@ -227,13 +234,13 @@ overflow: hidden;/*para que cualquier elemento se sobreponga solamente no se vea
 /* Estilos para los títulos en la sección Gale */
 .card__titulogale1 h2,
 .card__titulogale2 h2 {
+
     font-size: 70px;
     line-height: 1.5rem;
     text-align: left;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     margin: 0; /* Eliminar márgenes innecesarios */
-    font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }
 
@@ -256,7 +263,6 @@ overflow: hidden;/*para que cualquier elemento se sobreponga solamente no se vea
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
     color: var(--colorplomo);
     margin-left: 10px; /* Espaciado entre el tercer título y el segundo */
@@ -265,6 +271,7 @@ overflow: hidden;/*para que cualquier elemento se sobreponga solamente no se vea
 
 /* Estilos adicionales para el párrafo */
 .parrafo {
+font-family: "Asul", serif;
     position: relative;
     color: var(--colorplomo);
     margin-top: 20px; /* Espaciado entre el último título y el párrafo */
@@ -370,7 +377,7 @@ font-size: 30px;
 
 }
 .contenedorprecio .card__titulo{
-    font-size: 30px;
+    font-size: 26px;
     color: var(--colorplomo);
 }
 .card-imageprecio {
@@ -462,14 +469,18 @@ align-items: center;
     width: 100%; /* Esto hace que el pie ocupe todo el ancho de la página */
     background-color: #2D2B3A;
     color: var(--textoblanco);
+    font-family: "Asul", serif;
+
     padding: 40px 20px;
     text-align: center;
-    font-family: Arial, sans-serif;
+ 
     bottom: 0; /* Lo coloca en la parte inferior si se usa posición fija */
 }
 
 
 .container {
+    font-family: "Asul", serif;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -540,6 +551,8 @@ align-items: center;
 /*Responsiva para pantallas pequeñas ,mobil*/
 @media screen and (max-width: 768px){/*pantalla maxima 768*/
     .principal{
+        font-family: "Asul", serif;
+
         width: 100%;/*estoy ganando espaciel ancho en modo movil*/
     }
     .principal h2, h3{
@@ -556,6 +569,7 @@ align-items: center;
     
 
     .menu{
+
         position: fixed;/*que sea fijo que no se mueva*/
         top: 0;
         left: 100%;
@@ -722,10 +736,14 @@ left: 35px ;
 /* Media Queries para dispositivos muy pequeños */
 @media screen and (max-width: 400px) {
 .card__titulo {
+    position: relative;
+  left: 20px;
     font-size: 50px;  /* Hace el título aún más pequeño en pantallas muy pequeñas */
 }
 
 .card__titulo2 {
+    position: relative;
+  left: 20px;
     font-size: 35px;  /* Reduce el tamaño de la fuente en pantallas muy pequeñas */
 }
 
@@ -874,9 +892,9 @@ flex-direction: column;
 align-items: center;
 }
 .silla{
-font-size: 10px;
+font-size: 3px;
     position: relative;
-    right: 3px;
+    right: -10px;
 }
 .card__fotosillaimg img {
 margin-left: 50px;
@@ -885,13 +903,16 @@ width: 350px;
 .contenedorprecio .card__titulo {
 position: relative;
 right: 30px;
-font-size:5px;
+font-size:6px;
 
+}
+.card__titulosilla h2{
+font-size: 19px;
 }
 .card__titulo2silla{
 position: relative;
 right:4%;
-font-size: 10px;
+font-size: 12px;
 }
 .card__titulo2silla .boton{
     position: relative;
@@ -912,9 +933,11 @@ justify-content: center;
 align-items: center;
 }
 .principal .precio h2 {
+    position: relative;
     text-align: center;
     justify-items: center;
-    font-size: 17px;
+    right: 40px;
+    font-size: 19px;
 }
 .principal .cards .card .card__titulo p{
     font-size: 60px;
